@@ -2,8 +2,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../components/Home';
 import GamesScreen from '../components/Games';
 import BlogScreen from '../components/Blog';
-import { MenuNavigator } from './MenuNavigator';
+import { MenuNavigator, StackNavigator } from './MenuNavigator';
 import { SVGHome, SVGGames, SVGBlog, SVGMenu } from '../components/SVGIcons';
+import { GamesNavigator } from './GamesNavigator';
+import { BlogNavigator } from './BlogNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,7 +14,7 @@ function TabNavigator() {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={() => ({
-        headerShown: false,
+        headerShown: true,
         headerTitleAlign: 'center',
         tabBarShowLabel: false,
         tabBarActiveTintColor: '#212121',
@@ -31,7 +33,7 @@ function TabNavigator() {
       />
       <Tab.Screen
         name="Games"
-        component={GamesScreen}
+        component={GamesNavigator}
         options={{
           tabBarLabel: 'Games',
           tabBarIcon: ({ color, size }) => (
@@ -41,7 +43,7 @@ function TabNavigator() {
       />
       <Tab.Screen
         name="Blog"
-        component={BlogScreen}
+        component={BlogNavigator}
         options={{
           tabBarLabel: 'Blog',
           tabBarIcon: ({ color, size }) => (

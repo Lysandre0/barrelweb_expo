@@ -1,10 +1,68 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, ScrollView } from 'react-native';
+import { Card, Button } from 'react-native-elements'
+import { useNavigation } from '@react-navigation/native';
 
 function BlogScreen() {
+  const navigation = useNavigation();
   return (
-    <View style={styles.container}>
-      <Text>Blog!</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <Card>
+        <Card.Title>HELLO WORLD</Card.Title>
+        <Card.Divider />
+        <Text style={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+        <Button onPress={() => navigation.navigate("ArticleScreen")} style={styles.button} title='OPEN' />
+      </Card>
+      <Card>
+        <Card.Title>HELLO WORLD</Card.Title>
+        <Card.Divider />
+        <Text style={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+        <Button onPress={() => navigation.navigate("ArticleScreen")} style={styles.button} title='OPEN' />
+      </Card>
+      <Card>
+        <Card.Title>HELLO WORLD</Card.Title>
+        <Card.Divider />
+        <Text style={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+        <Button onPress={() => navigation.navigate("ArticleScreen")} style={styles.button} title='OPEN' />
+      </Card>
+      <Card>
+        <Card.Title>HELLO WORLD</Card.Title>
+        <Card.Divider />
+        <Text style={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+        <Button onPress={() => navigation.navigate("ArticleScreen")} style={styles.button} title='OPEN' />
+      </Card>
+      <Card>
+        <Card.Title>HELLO WORLD</Card.Title>
+        <Card.Divider />
+        <Text style={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+        <Button onPress={() => navigation.navigate("ArticleScreen")} style={styles.button} title='OPEN' />
+      </Card>
+      <Card>
+        <Card.Title>HELLO WORLD</Card.Title>
+        <Card.Divider />
+        <Text style={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+        <Button onPress={() => navigation.navigate("ArticleScreen")} style={styles.button} title='OPEN' />
+      </Card>
+      <Card>
+        <Card.Title>HELLO WORLD</Card.Title>
+        <Card.Divider />
+        <Text style={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+        <Button onPress={() => navigation.navigate("ArticleScreen")} style={styles.button} title='OPEN' />
+      </Card>
+    </ScrollView>
   );
 }
 
@@ -13,7 +71,9 @@ export default BlogScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  text: {
+    marginBottom: 20,
   },
 });

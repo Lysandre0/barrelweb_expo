@@ -41,8 +41,8 @@ function RegisterScreen() {
         onChangeText={text => setPassword(text)}
         secureTextEntry />
       <Text style={styles.text}>{errorMessage}</Text>
-      <Pressable onPress={handleRegister} style={styles.pressable}>
-        <Text style={styles.text}>S'inscrire</Text>
+      <Pressable onPress={handleRegister} style={styles.pressableRegister}>
+        <Text style={styles.textRegister}>S'INSCRIRE</Text>
       </Pressable>
       <Pressable onPress={() => navigation.navigate("LoginScreen")} style={styles.pressable}>
         <Text style={styles.text}>Connexion</Text>
@@ -76,11 +76,38 @@ const styles = StyleSheet.create({
   pressable: {
     width: 200,
     height: 50,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFF',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 30,
     elevation: 3,
   },
+  pressableLogIn: {
+    width: 200,
+    height: 50,
+    backgroundColor: '#FFF',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 30,
+    elevation: 3,
+    backgroundColor: '#000',
+    color: '#FFF',
+  },
+  pressableRegister: {
+    width: 200,
+    height: 50,
+    backgroundColor: '#2089dc',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 30,
+    elevation: 3,
+  },
+  textRegister: {
+    fontSize: 16,
+    color: '#fff',
+    fontWeight: 'bold',
+  }
 });

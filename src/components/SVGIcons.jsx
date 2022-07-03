@@ -15,6 +15,7 @@ export function SVGHome(props) {
     </Svg>
   )
 }
+
 export function SVGGames(props) {
   return (
     <Svg

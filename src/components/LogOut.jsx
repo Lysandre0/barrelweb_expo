@@ -17,23 +17,23 @@ function LogoutScreen() {
 
   return (
     <View style={styles.container}>
-      <Pressable onPress={() => navigation.navigate(AccountScreen)} style={styles.pressable}>
+      <Pressable onPress={() => navigation.navigate("AccountScreen")} style={styles.pressable}>
         <Text style={styles.text}>Compte</Text>
       </Pressable>
-      <Pressable onPress={() => navigation.navigate(OrderScreen)} style={styles.pressable}>
+      <Pressable onPress={() => navigation.navigate("OrderScreen")} style={styles.pressable}>
         <Text style={styles.text}>Commandes</Text>
       </Pressable>
-      <Pressable onPress={() => navigation.navigate(MessageScreen)} style={styles.pressable}>
+      <Pressable onPress={() => navigation.navigate("MessageScreen")} style={styles.pressable}>
         <Text style={styles.text}>Messages</Text>
       </Pressable>
-      <Pressable onPress={() => navigation.navigate(AssistanceScreen)} style={styles.pressable}>
+      <Pressable onPress={() => navigation.navigate("AssistanceScreen")} style={styles.pressable}>
         <Text style={styles.text}>Assistance</Text>
       </Pressable>
-      <Pressable onPress={() => navigation.navigate(AboutScreen)} style={styles.pressable}>
+      <Pressable onPress={() => navigation.navigate("AboutScreen")} style={styles.pressable}>
         <Text style={styles.text}>A propos</Text>
       </Pressable>
-      <Pressable onPress={handleLogOut} style={styles.pressable}>
-        <Text style={styles.text}>Log Out</Text>
+      <Pressable onPress={handleLogOut} style={styles.pressableLogOut}>
+        <Text style={styles.textLogOut}>LOG OUT</Text>
       </Pressable>
     </View>
   );
@@ -71,4 +71,19 @@ const styles = StyleSheet.create({
     marginTop: 30,
     elevation: 3,
   },
+  pressableLogOut: {
+    width: 200,
+    height: 50,
+    backgroundColor: '#2089dc',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 30,
+    elevation: 3,
+  },
+  textLogOut: {
+    fontSize: 16,
+    color: '#fff',
+    fontWeight: 'bold',
+  }
 });

@@ -9,9 +9,9 @@ const Stack = createStackNavigator();
 export function MenuNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="MenuScreen"
       screenOptions={() => ({
-        headerShown: true,
+        initalRouteName: 'MenuScreen',
+        headerShown: false,
         headerTitleAlign: 'center',
         tabBarActiveTintColor: '#212121',
         headerStyle: { backgroundColor: '#FAFAFA' },

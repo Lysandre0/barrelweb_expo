@@ -45,8 +45,8 @@ function LogInScreen() {
         secureTextEntry
       />
       <Text style={styles.text}>{errorMessage}</Text>
-      <Pressable onPress={handleLogin} style={styles.pressable}>
-        <Text style={styles.text}>Se connecter</Text>
+      <Pressable onPress={handleLogin} style={styles.pressableLogIn}>
+        <Text style={styles.textLogIn}>SE CONNECTER</Text>
       </Pressable>
       <Pressable onPress={() => navigation.navigate("RegisterScreen")} style={styles.pressable}>
         <Text style={styles.text}>Inscription</Text>
@@ -87,4 +87,19 @@ const styles = StyleSheet.create({
     marginTop: 30,
     elevation: 3,
   },
+  pressableLogIn: {
+    width: 200,
+    height: 50,
+    backgroundColor: '#2089dc',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 30,
+    elevation: 3,
+  },
+  textLogIn: {
+    fontSize: 16,
+    color: '#fff',
+    fontWeight: 'bold',
+  }
 });
